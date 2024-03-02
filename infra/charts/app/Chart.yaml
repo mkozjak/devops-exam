@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 1.0.5
+appVersion: 1.0.0
 description: A Helm chart for the exam devops app
 name: app
 type: application
