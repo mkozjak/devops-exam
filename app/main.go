@@ -18,8 +18,8 @@ type User struct {
 func main() {
 	username := os.Getenv("DB_USERNAME")
 	password := os.Getenv("DB_PASSWORD")
-	databaseName := "devops"
-	databaseHost := "mysql"
+	databaseName := os.Getenv("DB_NAME")
+	databaseHost := os.Getenv("DB_HOST")
 
 	// Initiate database connection
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s", username, password, databaseHost, databaseName)
