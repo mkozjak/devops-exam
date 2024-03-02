@@ -40,6 +40,11 @@ curl http://localhost:80
 <h1>Users</h1><ul><li>Name: Eve, Email: eve@example.com</li><li>Name: John, Email: john@example.com</li></ul>
 ```
 
+## One-liner
+```sh
+./utils/build_deploy_app.sh
+```
+
 # Version bumping
 In order to prepare our chart for the app update (potentially via a Continuous Deployment stage) we can run the following procedure:
 
