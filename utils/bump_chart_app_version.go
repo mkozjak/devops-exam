@@ -88,5 +88,5 @@ func main() {
 		log.Fatalf("Error writing YAML file: %v", err)
 	}
 
-	log.Println("Bumping done.")
+	log.Println("Chart bumping done.")
 }
