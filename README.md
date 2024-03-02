@@ -12,7 +12,8 @@ We should now have following resources deployed:
 1. MySQL database (service, deployment and pods)
 2. ConfigMaps for database configuration
 3. Secrets for database credentials
-4. A ubuntu container for dev and testing purposes.
+4. A ubuntu container for dev and testing purposes
+5. Database fixtures with initial data.
 
 # Application
 After the previous section is done, we need to build our application locally and package it as a Docker image:
