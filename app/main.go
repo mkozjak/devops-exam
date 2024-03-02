@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -15,8 +16,15 @@ type User struct {
 }
 
 func main() {
+	username := os.Getenv("DB_USERNAME")
+	password := os.Getenv("DB_PASSWORD")
+	databaseName := "devops"
+	databaseHost := "mysql"
+
 	// Initiate database connection
-	db, err := sql.Open("mysql", "username:password@tcp(mysql:3306)/devops")
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:3306)/%s", username, password, databaseHost, databaseName)
+
+	db, err := sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal(err)
 	}
